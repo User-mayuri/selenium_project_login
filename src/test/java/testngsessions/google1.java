@@ -19,8 +19,8 @@ public class google1 {
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//Thread.sleep(2000);
 	}
 	
 	@Test
