@@ -13,13 +13,14 @@ public class google1 {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void setup()
+	public void setup() throws InterruptedException
 	{
 		driver=new ChromeDriver();
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		Thread.sleep(2000);
 	}
 	
 	@Test
